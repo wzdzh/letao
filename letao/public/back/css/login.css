@@ -1,0 +1,17 @@
+.mt150{
+  margin-top:150px;
+}
+.panel{
+  border-color:#337ab7;
+}
+.container .panel .header{
+  text-align: center;
+  color:#fff;
+  font-size: 18px;
+  background-color:#337ab7;
+  border-color:#337ab7;
+}
+.login{
+  background-color: #337ab7;
+  color:#fff;
+}
