@@ -66,9 +66,4 @@ $(function(){
   };
   myChart1.setOption(option1);
 
-  $(window).on("resize",function(){
-    var width = $(window).width();
-    var headerWidth = width - 180;
-    $(".lt_header"). css({width:headerWidth});
-  }).trigger("resize");
 });

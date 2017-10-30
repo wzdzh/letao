@@ -100,3 +100,9 @@ h3{
 .breadcrumb a{
   color:#337ab7;
 }
+table th,td{
+  text-align: center;
+}
+.lt_content .table tr>th,td{
+  vertical-align: middle;
+}
