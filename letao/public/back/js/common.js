@@ -22,7 +22,7 @@ $(function(){
 
 
   $(".icon_loginout").on("click",function(){
-    $(".modal").modal("show");
+    $(".logout_modal").modal("show");
   });
 
   $(".father").on("click",function(){

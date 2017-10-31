@@ -32,4 +32,29 @@ $(function(){
 
  }
   render();
+
+  $("tbody").on("click",".btn",function(){
+    $(".user_modal").modal("show");
+    var id = $(this).parent().data("id");
+    var isDelete = $(this).parent().data("isDelete");
+    $(".user_btn").off().on("click",function(){
+
+        $.ajax({
+          type:"post",
+          url:" /user/updateUser",
+          data:{
+            id:id,
+            isDelete:isDelete
+          },
+          success:function(data){
+            if(data.success){
+              $(".user_modal").modal("hide");
+              render();
+            }
+
+          }
+        })
+    })
+  });
+
 });
