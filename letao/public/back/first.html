@@ -19,12 +19,12 @@
     </div>
     <div class="nav">
       <ul>
-        <li><a href="#"  class="now"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+        <li><a href="user.html"  ><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
         <li class="father"><a href="#"><i class="glyphicon glyphicon-list"></i>分类管理</a></li>
-        <li class="child" style="display:none"><a href="#">一级分类</a>
-          <a href="#">二级分类</a></li>
+        <li class="child" style="display:block"><a href="first.html" class="now">一级分类</a>
+          <a href="second.html">二级分类</a></li>
 
-        <li><a href="#"><i class="glyphicon glyphicon-tags"></i>商品管理</a></li>
+        <li><a href="goods.html"><i class="glyphicon glyphicon-tags"></i>商品管理</a></li>
       </ul>
     </div>
   </div>
@@ -36,11 +36,30 @@
     <div class="container-fluid">
       <ol class="breadcrumb">
         <li><a href="#">管理系统</a></li>
-        <li>用户管理</li>
+        <li><a href="#">分类管理</a></li>
+        <li>一级分类</li>
       </ol>
+      <div class="lt_content">
+        <button class="add_cate btn btn-default mb20">添加分类</button>
+        <table class="table table-bordered table-hover text-center">
+          <thead>
+          <tr>
+            <th width="20%">序号</th>
+            <th width="80%">分类名称</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+        <div  class="pull-right">
+          <ul id="pagintor"></ul>
+        </div>
+      </div>
     </div>
+
   </div>
-  <div class="modal fade">
+  <div class="modal fade logout_modal">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -58,11 +77,45 @@
     </div>
 
   </div>
+  <div class="modal fade first_modal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">添加一级分类</h4>
+        </div>
+        <div class="modal-body">
+          <form id="form">
+            <div class="form-group">
+              <label for="first_cate"></label>
+              <input type="text" class="form-control" id="first_cate" placeholder="请输入一级分类"
+              name="categoryName">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" form="form" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" form="form" class="btn btn-primary first_btn">确定</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
+<script type="text/html" id="tpl">
+  {{each rows v i}}
+  <tr>
+    <td>{{(page - 1)*size+i+1 }}</td>
+    <td>{{v.categoryName}}</td>
+  </tr>
+  {{/each}}
+</script>
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src='lib/nprogress/nprogress.js'></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
 <script src="js/common.js"></script>
-<script src="js/user.js"></script>
+<script src="js/first.js"></script>
 </html>

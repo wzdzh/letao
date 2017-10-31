@@ -106,3 +106,6 @@ table th,td{
 .lt_content .table tr>th,td{
   vertical-align: middle;
 }
+.mb20{
+  margin-bottom:20px;
+}

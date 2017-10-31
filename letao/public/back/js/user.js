@@ -38,7 +38,6 @@ $(function(){
     var id = $(this).parent().data("id");
     var isDelete = $(this).parent().data("isDelete");
     $(".user_btn").off().on("click",function(){
-
         $.ajax({
           type:"post",
           url:" /user/updateUser",
