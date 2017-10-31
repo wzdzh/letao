@@ -57,10 +57,10 @@ $(function(){
   $('#fileupload').fileupload({
     dataType: 'json',
     done: function (e, data) {
-      console.log(data.result);
-        $(".img_box img").attr("src",data.result.picAddr);
-        $("#brandLogo").val(data.result.picAddr);
-      $form.data('bootstrapValidator').updateStatus("brandLogo", "VALID");
+      //console.log(data.result);
+      //  $(".img_box img").attr("src",data.result.picAddr);
+      //  $("#brandLogo").val(data.result.picAddr);
+      //$form.data('bootstrapValidator').updateStatus("brandLogo", "VALID");
     }
   });
 
