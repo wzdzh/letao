@@ -109,3 +109,13 @@ table th,td{
 .mb20{
   margin-bottom:20px;
 }
+.pic_box{
+  position: relative;
+  cursor:pointer;
+}
+.file_cate{
+  position: absolute;
+  top:5px;
+  left:5px;
+  opacity: 0;
+}

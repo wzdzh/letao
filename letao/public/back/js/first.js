@@ -71,6 +71,7 @@ $(function(){
           render();
           $form[0].reset();
           validator.resetForm();
+
         }
       }
     });
