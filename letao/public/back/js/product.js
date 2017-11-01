@@ -175,6 +175,7 @@ $(function(){
           $form.data("bootstrapValidator").resetForm();
           $(".cate-two").html("请选择");
           $(".img_box img").remove();
+          imgArr = [];
         }
       }
     })
