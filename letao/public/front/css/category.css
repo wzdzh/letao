@@ -1,0 +1,36 @@
+.cate_left{
+  width: 90px;
+  float: left;
+  position: relative;
+  height: 100%;
+  z-index:100;
+}
+.cate_left li a{
+  display: block;
+  height: 50px;
+  width: 90px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #f3f4f5;
+  color:#666;
+  border-right: 1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+.cate_left li a.now{
+  border-right: 1px solid transparent;
+  background-color: #fff;
+}
+.cate_right{
+  margin-left:90px;
+  height: 100%;
+}
+.cate_right li{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.cate_right li img{
+  width: 62px;
+  height: 62px;
+  margin:0 auto;
+}
