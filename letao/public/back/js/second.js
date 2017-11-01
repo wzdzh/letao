@@ -103,10 +103,9 @@ $(function(){
     }
 
   });
-
   $form.on('success.form.bv', function (e) {
     e.preventDefault();
-    console.log(1);
+
     $.ajax({
       type:"post",
       url:"/category/addSecondCategory",
