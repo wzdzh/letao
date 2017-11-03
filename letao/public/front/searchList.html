@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/searchList.css">
 </head>
 <body>
   <div class="container">
@@ -26,12 +26,17 @@
             <input type="text" placeholder="请输入搜索关键字" class="search_text">
             <button class="search_btn">搜索</button>
           </div>
-          <div class="history">
-
+          <div class="lt_sort mui-clearfix">
+            <a href="#">上架时间<span class="fa fa-angle-down"></span></a>
+            <a href="#" data-type="price" class="now">价格<span class="fa fa-angle-down"></span></a>
+            <a href="#" data-type="num">库存<span class="fa fa-angle-down"></span></a>
+            <a href="#">折扣<span class="fa fa-angle-down"></span></a>
+          </div>
+          <div class="lt_product mui-clearfix">
+            <div class="loading"></div>
           </div>
         </div>
       </div>
-
     </div>
     <div class="lt_footer">
       <ul class="foot_nav">
@@ -44,23 +49,19 @@
   </div>
 </body>
 <script type="text/html" id="tpl">
-  {{if arr.length === 0}}
-  <p>暂无搜索历史</p>
-  {{/if}}
-  {{if arr.length > 0}}
-  <div class="his_title mui-clearfix">
-    <span class="mui-pull-left">搜索历史</span>
-    <span class="mui-pull-right empty_his" ><i class="fa fa-trash"></i>清空记录</span>
-  </div>
-  <ul class="ser_his">
-    {{each arr v i}}
-    <li><a href="searchList.html?key={{v}}" class="mui-pull-left">{{v}}</a><span class="fa fa-close mui-pull-right" data-index="{{i}}"></span></li>
-    {{/each}}
-  </ul>
-  {{/if}}
+  {{each data v i}}
+  <a href="product.html?productId={{v.id}}" class="item">
+    <img src="{{v.pic[0].picAddr}}" alt="">
+    <p class="mui-ellipsis-2">{{v.proName}}</p>
+    <div class="money"><span>&yen;{{v.price}}</span><span>&yen;{{v.oldPrice}}</span>
+    </div>
+    <button class="mui-btn-blue">立即购买</button>
+  </a>
+  {{/each}}
 </script>
 <script src="lib/mui/js/mui.js"></script>
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
-<script src="js/search.js"></script>
+<script src="js/common.js"></script>
+<script src="js/searchList.js"></script>
 </html>

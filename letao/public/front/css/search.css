@@ -1,27 +1,4 @@
-.search{
-  height: 54px;
-  width: 100%;
-  padding: 10px;
-  position: relative;
-}
-.search input{
-  height: 34px;
-  border:1px solid #069;
-  color:#f3f4f5;
-  font-size: 12px;
-  border-radius: 5px;
-  margin: 0;
-}
-.search button{
-  background-color: #069;
-  color:#fff;
-  position:absolute;
-  right:10px;
-  top:10px;
-  border:none;
-  height: 34px;
-  border-radius: 0 5px 5px 0;
-}
+
 .history{
   width: 100%;
   padding:10px;

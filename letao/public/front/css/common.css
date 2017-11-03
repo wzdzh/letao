@@ -85,3 +85,62 @@ body,html{
   position: relative;
   background-color: #fff;
 }
+
+
+.lt_product{
+  width: 100%;
+  padding: 10px;
+  position:relative;
+}
+.lt_product .item{
+  float: left;
+  width: 48%;
+  padding:10px;
+  margin-top: 10px;
+  border:1px solid #ccc;
+  text-align: center;
+}
+.lt_product .item:nth-child(odd){
+  margin-right: 4%;
+}
+.item .money{
+  margin:10px;
+}
+.item span:first-child{
+  font-size: 16px;
+  color: red;
+}
+.item span:nth-child(2){
+  font-size: 14px;
+  text-decoration: line-through;
+  color:#ccc;
+  margin-left:8px;
+}
+img{
+  display: block;
+  width: 100%;
+}
+.search{
+  height: 54px;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+.search input{
+  height: 34px;
+  border:1px solid #069;
+  color:#333;
+  font-size: 12px;
+  border-radius: 5px;
+  margin: 0;
+}
+.search button{
+  background-color: #069;
+  color:#fff;
+  position:absolute;
+  right:10px;
+  top:10px;
+  border:none;
+  height: 34px;
+  border-radius: 0 5px 5px 0;
+}

@@ -1,0 +1,39 @@
+.floor{
+  position:fixed;
+  bottom:0;
+  width: 100%;
+  max-width: 640px;
+  background-color: #eee;
+  height:45px;
+  text-align: center;
+  margin:0 auto;
+  padding:5px 10px 5px 10px;
+}
+.container{
+  padding-bottom: 45px;
+}
+.floor .shop{
+  font-size: 14px;
+  line-height:35px;
+  float: left;
+  margin-left: 10px;
+}
+.lt_content .item{
+  border-bottom: 1px solid #ccc;
+  padding:10px;
+}
+.item p{
+  margin:0;
+  padding:0;
+}
+.lt_content .first-item{
+  border-top:1px solid #ccc;
+}
+.pro_name{
+  font-size: 16px;
+  font-weight: 700;
+  color:#000;
+}
+.price{
+  font-size: 16px;
+}
