@@ -18,11 +18,12 @@
   float: left;
   margin-left: 10px;
 }
-.lt_content .item{
+.lt_content .lt_item{
   border-bottom: 1px solid #ccc;
   padding:10px;
+  word-break: break-all;
 }
-.item p{
+.lt_item p{
   margin:0;
   padding:0;
 }
@@ -34,6 +35,27 @@
   font-weight: 700;
   color:#000;
 }
-.price{
-  font-size: 16px;
+.lt_content .lt_item .price{
+  font-size: 20px;
+  color:red;
 }
+.lt_content .lt_item .old-price{
+  color:#666;
+  text-decoration: line-through;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.lt_item .size span{
+  background-color: #eee;
+  padding:5px;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+}
+.lt_item .num{
+  font-size: 12px;
+}
+.lt_item .desc{
+  
+}
+

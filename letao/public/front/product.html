@@ -25,28 +25,7 @@
     <div class="lt_content">
       <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
-          <div class="mui-slider">
-            <div class="mui-slider-group mui-slider-loop">
-              <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/detail.jpg" /></a></div>
-              <div class="mui-slider-item"><a href="#"><img src="images/product.jpg" /></a></div>
-              <div class="mui-slider-item"><a href="#"><img src="images/detail.jpg" /></a></div>
-              <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/product.jpg" /></a></div>
-            </div>
 
-            <div class="mui-slider-indicator">
-              <div class="mui-indicator mui-active"></div>
-              <div class="mui-indicator"></div>
-            </div>
-          </div>
-          <div class="item first-item">
-            <p class="pro_name">李宁闪亮篮球鞋李宁闪亮篮球鞋李宁闪亮篮球鞋李宁闪亮篮球鞋李宁闪亮篮球鞋</p>
-          </div>
-          <div class="item">
-            <div>价格: <span class="price">&yen;499</span><span class="old-price">&yen;322</span></div>
-          </div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
         </div>
       </div>
     </div>
@@ -60,15 +39,50 @@
   </div>
 </body>
 <script type="text/html" id="tpl">
-  {{each data v i}}
-  <a href="product.html?productId={{v.id}}" class="item">
-    <img src="{{v.pic[0].picAddr}}" alt="">
-    <p class="mui-ellipsis-2">{{v.proName}}</p>
-    <div class="money"><span>&yen;{{v.price}}</span><span>&yen;{{v.oldPrice}}</span>
+  <div class="mui-slider">
+    <div class="mui-slider-group mui-slider-loop">
+      <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[pic.length-1].picAddr}}" /></a></div>
+      {{each pic v i}}
+      <div class="mui-slider-item"><a href="#"><img src="{{v.picAddr}}" /></a></div>
+      {{/each}}
+      <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[0].picAddr}}" /></a></div>
     </div>
-    <button class="mui-btn-blue">立即购买</button>
-  </a>
-  {{/each}}
+
+    <div class="mui-slider-indicator">
+      {{each pic v i}}
+      <div class="mui-indicator {{i ===0?'mui-active':''}}"></div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="lt_item first-item">
+    <p class="pro_name">{{proName}}</p>
+  </div>
+  <div class="lt_item">
+    <div>价格: <span class="price">&yen;{{price}}</span><span class="old-price">&yen;{{oldPrice}}</span></div>
+  </div>
+  <div class="lt_item mui-clearfix">
+    <div class="size ">
+      尺码:
+      {{each size v i}}
+      <span>{{v}}</span>
+      {{/each}}
+    </div>
+  </div>
+  <div class="lt_item">
+    数量:
+    <div class="mui-numbox" data-numbox-min='1' data-numbox-max="{{num}}">
+      <!-- "-"按钮，点击可减小当前数值 -->
+      <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+      <input class="mui-numbox-input" type="number" />
+      <!-- "+"按钮，点击可增大当前数值 -->
+      <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+
+    </div>
+    <span class="num">剩余数量:{{num}}</span>
+  </div>
+  <div class="lt_item">
+    <span class="desc">详情: {{proDesc}}</span>
+  </div>
 </script>
 <script src="lib/mui/js/mui.js"></script>
 <script src="lib/zepto/zepto.min.js"></script>
